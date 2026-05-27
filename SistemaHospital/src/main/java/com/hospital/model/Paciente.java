@@ -1,13 +1,60 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.hospital.model;
 
-/**
- *
- * @author 10jul
- */
+import java.time.LocalDateTime;
+
 public class Paciente {
-    
+
+    private int id;
+    private String nombre;
+    private int edad;
+    private String dpi;
+    private String sintomas;
+    private Prioridad prioridad;
+    private LocalDateTime horaIngreso;
+
+    public Paciente() {
+    }
+
+    public Paciente(String nombre, int edad, String dpi,
+                     String sintomas, Prioridad prioridad) {
+
+        this.nombre = nombre;
+        this.edad = edad;
+        this.dpi = dpi;
+        this.sintomas = sintomas;
+        this.prioridad = prioridad;
+        this.horaIngreso = LocalDateTime.now();
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public String getDpi() {
+        return dpi;
+    }
+
+    public String getSintomas() {
+        return sintomas;
+    }
+
+    public Prioridad getPrioridad() {
+        return prioridad;
+    }
+
+    public LocalDateTime getHoraIngreso() {
+        return horaIngreso;
+    }
 }

@@ -1,13 +1,20 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.hospital.model;
 
-/**
- *
- * @author 10jul
- */
-public class PacienteComparator {
-    
+import java.util.Comparator;
+
+public class PacienteComparator implements Comparator<Paciente> {
+
+    @Override
+    public int compare(Paciente p1, Paciente p2) {
+
+        int prioridadComparacion =
+                p1.getPrioridad().compareTo(p2.getPrioridad());
+
+        if (prioridadComparacion != 0) {
+            return prioridadComparacion;
+        }
+
+        return p1.getHoraIngreso()
+                .compareTo(p2.getHoraIngreso());
+    }
 }
