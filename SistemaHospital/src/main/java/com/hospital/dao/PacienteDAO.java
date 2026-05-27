@@ -16,7 +16,7 @@ public class PacienteDAO {
                 (nombre, edad, dpi, sintomas, prioridad)
                 VALUES (?, ?, ?, ?, ?)
                                """;
-
+//la tabla//
         try (Connection conn = ConexionDB.conectar();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
 
