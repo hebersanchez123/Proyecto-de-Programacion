@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10"
+      xmlns:fx="http://javafx.com/fxml"
+      alignment="CENTER"
+      prefWidth="600"
+      prefHeight="700">
+
+    <Label text="Sistema Hospitalario"/>
+
+    <TextField fx:id="txtNombre"
+               promptText="Nombre"/>
+
+    <TextField fx:id="txtEdad"
+               promptText="Edad"/>
+
+    <TextField fx:id="txtDpi"
+               promptText="DPI"/>
+
+    <TextArea fx:id="txtSintomas"
+              promptText="Síntomas"/>
+
+    <ComboBox fx:id="cbPrioridad"/>
+
+    <Button text="Registrar Paciente"/>
+
+    <Button text="Atender Siguiente"/>
+
+    <TableView fx:id="tablaPacientes">
+
+        <columns>
+
+            <TableColumn text="Nombre"/>
+            <TableColumn text="Edad"/>
+            <TableColumn text="Prioridad"/>
+
+        </columns>
+
+    </TableView>
+
+</VBox>
