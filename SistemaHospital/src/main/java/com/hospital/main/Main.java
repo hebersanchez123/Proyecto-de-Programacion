@@ -1,13 +1,27 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.hospital.main;
 
-/**
- *
- * @author 10jul
- */
-public class Main {
-    
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+
+public class Main extends Application {
+
+    @Override
+    public void start(Stage stage) throws Exception {
+
+        FXMLLoader loader =
+                new FXMLLoader(getClass()
+                .getResource("/com/hospital/view/MainView.fxml"));
+
+        Scene scene = new Scene(loader.load());
+
+        stage.setTitle("Hospital Prioridades");
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public static void main(String[] args) {
+        launch();
+    }
 }
